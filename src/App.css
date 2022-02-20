@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  background-color: azure;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.navbar {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  background: #6ACFED;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.navbar__left-logo img {
+  width: 110px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar__right {
   display: flex;
-  flex-direction: column;
+  list-style-type: none;
+}
+.navbar__right li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 0 15px;
+}
+
+/* Helpers */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid System */
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.33333333333333%;
+}
+
+/* header */
+.header__content {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  color: black;
+}
+.header__ul {
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 20px;
+}
+.header__ul li {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ff4a57;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 10px;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.header__ul li:hover {
+  background: #fff;
+  border: 2px solid transparent;
+}
+.header__ul li:hover .headerIcon {
+  color: #ff4a57;
 }
 
-.App-link {
-  color: #61dafb;
+.about{
+  background: azure;
 }
+/*img.about__img{*/
+  img.about__img{
+  border-radius: 10px;
+  width: 70%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+h1.about__heading{
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: start;
+  font-family: Montserrat,sans-serif;
+  font-size: 60px;
+}
+button.about.btn.pointer {
+  text-transform: capitalize;
+  width: 195px;
+  height: 55px;
+  font-size: 18px;
+  transition: .4s ease;
+}
+.about__button{
+  padding: 20px 0px;
+}
+a.bottom__to__top{
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: .4s all ease;
+  z-index: 1000;
+}
+a.bottom__to__top.active{
+  display: flex;
+}
+/* RESPONSIVE */
+@media only screen and (max-width: 1024px){
+  .p__color{
+      font-size: 15px!important;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+@media only screen and (max-width: 425px){
+button.about.btn.pointer {
+  text-transform: capitalize;
+  width: 165px;
+  height: 50px;
+  font-size: 13px;
+  transition: .4s ease;
+}
+}
+.contact{
+  background-color: azure;
+}
+h1.hire__text {
+  font-size: 60px;
+}
+p.hire__text{
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(29,29,36,.75);
+  font-weight: 400;
+}
+input.contact{
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  border: 2px solid rgba(0,0,0,.1);
+  border-radius: 5px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  height: 50px;
+  line-height: 46px;
+  margin: 20px 0px;
+  outline: none;
+  color: black;
+  font-size: 15px;
+  letter-spacing: .1px;
+  background: none;
+  border: 2px solid hsla(0,0%,100%,.2);
+}
+.contact__img{
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+textarea#message{
+  height: 120px;
+  background: none;
+  padding: 0 20px;
+  width: 100%;
+  line-height: 46px;
+  color: black;
+  font-size: 15px;
+  letter-spacing: .1px;
+  border: 2px solid hsla(0,0%,100%,.2);
+}
+button.btn.contact.pointer {
+  margin: 20px 0px;
 }
